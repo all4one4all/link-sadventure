@@ -9,10 +9,6 @@ var ctx = canvas.getContext('2d');
 canvas.width = 600;
 canvas.height = 400;
 ```
-关键帧：
-```javascript
-var keyFrame = true;
-```
 背景：
 ```javascript
 var bgReady = false;
@@ -22,3 +18,28 @@ bgImage.onload = function () {
 };
 bgImage.src = 'bg.png';
 ```
+角色贴图：
+```javascript
+function arrImage(arr) {
+    var arrImage = [];
+    for (let i = 0, j = arr.length; i < j; i++) {
+        arrImage[i] = [];
+        arrImage[i][0] = false;
+        arrImage[i][1] = new Image();
+        arrImage[i][1].onload = function() {
+            arrImage[i][0] = true;
+        };
+        arrImage[i][1].src = arr[i];
+    }
+    return arrImage;
+}
+var imageSrc = [];
+imageSrc.push('img/link01.png');
+//...
+imageSrc.push('img/link10.png');
+
+var arrObject = arrImage(imageSrc);
+```
+
+
+
