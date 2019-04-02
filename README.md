@@ -19,6 +19,16 @@ bgImage.onload = function () {
 bgImage.src = 'bg.png';
 ```
 角色贴图：
+正面（左），正面（右）
+背面（左），背面（右）
+侧面（站立）x2
+侧面（迈步）x2
+
+剑
+
+正面挥剑
+侧面挥剑x2
+背面挥剑
 ```javascript
 function arrImage(arr) {
     var arrImage = [];
