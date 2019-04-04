@@ -50,6 +50,21 @@ imageSrc.push('img/link10.png');
 
 var arrObject = arrImage(imageSrc);
 ```
-
-
+游戏对象状态：
+```javascript
+var hero = {
+    state: 1,  //角色未拾取武器前状态（正面or侧面or背面）
+    killState: 0,  //角色拾取武器后状态（正面or侧面or背面）
+    speed: 80,
+    x: 0,
+    y: 0,
+    weapon: false
+};
+var weapon = {
+    x: canvas.width / 2, //武器横坐标
+    y: canvas.width / 2, //武器纵坐标
+    type: sward  //武器类型
+	state: 1 //武器违背拾取，当拾取后改状态转变为0
+};
+```
 
