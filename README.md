@@ -58,7 +58,7 @@ var hero = {
     speed: 80,
     x: 0,
     y: 0,
-    weapon: false
+    weapon: false  //角色是否拾取武器
 };
 var weapon = {
     x: canvas.width / 2, //武器横坐标
@@ -67,4 +67,18 @@ var weapon = {
 	state: 1 //武器违背拾取，当拾取后改状态转变为0
 };
 ```
-
+处理按键
+```javascript
+var keysDown = {};
+addEventListener('keydown', function(e) {
+    keysDown[e.keyCode] = true;
+}, false);
+addEventListener('keyup', function(e) {
+    delete keysDown[e.keyCode];
+}, false);
+```
+```javascript
+if (!hero.weapon) {
+    delete keysDown[75]; //攻击键“k”键，如果角色还未拾取武器，则“k”键无效
+}
+```
