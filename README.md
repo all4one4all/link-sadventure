@@ -82,3 +82,9 @@ if (!hero.weapon) {
     delete keysDown[75]; //攻击键“k”键，如果角色还未拾取武器，则“k”键无效
 }
 ```
+根据按键更新对象状态
+```
+var update = function (delta) {
+
+}
+```
