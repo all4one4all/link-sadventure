@@ -5,20 +5,28 @@
 背景贴图
 武器贴图：剑
 角色贴图：
-* 林克正面、
+* 林克正面贴图a、林克正面贴图b
+* 林克侧面贴图a（左）、林克侧面贴图b（左）
+* 林克侧面贴图a（右）、林克侧面贴图b（右）
+* 林克背面贴图a、林克背面贴图b
+* 林克正面挥剑贴图
+* 林克侧面挥剑（左）
+* 林克侧面挥剑（右）
+* 林克背面挥剑
 
 ## 代码
+### 画布
 ```html
 <canvas id="viewing"></canvas>
 ```
-画布：
 ```javascript
 var canvas = document.getElementById('viewing');
 var ctx = canvas.getContext('2d');
 canvas.width = 600;
 canvas.height = 400;
 ```
-背景：
+### 背景
+载入背景贴图：
 ```javascript
 var bgReady = false;
 var bgImage = new Image();
@@ -27,17 +35,8 @@ bgImage.onload = function () {
 };
 bgImage.src = 'bg.png';
 ```
-游戏对象贴图：
-正面（左），正面（右）
-背面（左），背面（右）
-侧面（站立）x2
-侧面（迈步）x2
-
-剑
-
-正面挥剑
-侧面挥剑x2
-背面挥剑
+### 游戏对象
+载入武器与角色贴图
 ```javascript
 function arrImage(arr) {
     var arrImage = [];
