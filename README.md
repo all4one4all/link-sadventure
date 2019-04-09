@@ -26,7 +26,7 @@ canvas.width = 600;
 canvas.height = 400;
 ```
 ### 背景
-载入背景贴图，且声明一个布尔值表示背景贴图是否载入完成
+载入背景贴图；且声明一个布尔值表示背景贴图是否载入完成
 ```javascript
 var bgReady = false;
 var bgImage = new Image();
@@ -36,7 +36,7 @@ bgImage.onload = function () {
 bgImage.src = 'bg.png';
 ```
 ### 游戏对象
-载入武器与角色贴图
+载入武器与角色贴图；声明一个二维数组，数组的每一项的第一项
 ```javascript
 function arrImage(arr) {
     var arrImage = [];
