@@ -59,6 +59,16 @@ imageSrc.push('img/link10.png');
 var arrObject = arrImage(imageSrc);
 ```
 ### 游戏对象状态
+hero.stats = 1 林克正面a
+hero.stats = 2 林克正面b
+hero.stats = -1 林克背面a
+hero.stats = -2 林克背面a
+hero.stats = 6 林克右侧a
+hero.stats = 9 林克右侧b
+hero.stats = -6 林克左侧a
+hero.stats = -9 林克左侧a
+
+hero.ki
 ```javascript
 var hero = {
     state: 1,  //角色未拾取武器前状态（正面or侧面or背面），当拾取后改状态转变为0
