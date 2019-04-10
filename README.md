@@ -95,7 +95,7 @@ if (!hero.weapon) {
 ```javascript
 var update = function(delta) {
     if (87 in keysDown) { //用户按下了w键
-        if (hero.state === -1) {
+        if (hero.state === -1) { //
             hero.state = -2;
         } else {
             hero.state = -1;
