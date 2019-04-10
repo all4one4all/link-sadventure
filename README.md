@@ -58,7 +58,7 @@ imageSrc.push('img/link10.png');
 
 var arrObject = arrImage(imageSrc);
 ```
-游戏对象状态：
+### 游戏对象状态
 ```javascript
 var hero = {
     state: 1,  //角色未拾取武器前状态（正面or侧面or背面），当拾取后改状态转变为0
@@ -75,7 +75,8 @@ var weapon = {
 	state: 1 //武器违背拾取，当拾取后改状态转变为0
 };
 ```
-处理按键
+### 处理按键
+声明一个对象，存储玩家的输入
 ```javascript
 var keysDown = {};
 addEventListener('keydown', function(e) {
@@ -91,18 +92,18 @@ if (!hero.weapon) {
 }
 ```
 根据按键更新对象状态
-```
-var update = function (delta) {
-if (87 in keysDown) {//up38 w87
-            if (hero.state === -1) {
-                hero.state = -2;
-            }else {
-                hero.state = -1;
-            }
-            hero.y -= hero.speed * modifier;
-            if(hero.y <= 0){
-                hero.y = 0;
-            }
-        } 
+```javascript
+var update = function(delta) {
+    if (87 in keysDown) { //用户按下了w键
+        if (hero.state === -1) {
+            hero.state = -2;
+        } else {
+            hero.state = -1;
+        }
+        hero.y -= hero.speed * modifier;
+        if (hero.y <= 0) {
+            hero.y = 0;
+        }
+    }
 }
 ```
