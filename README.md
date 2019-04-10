@@ -93,6 +93,16 @@ if (!hero.weapon) {
 根据按键更新对象状态
 ```
 var update = function (delta) {
-
+if (87 in keysDown) {//up38 w87
+            if (hero.state === -1) {
+                hero.state = -2;
+            }else {
+                hero.state = -1;
+            }
+            hero.y -= hero.speed * modifier;
+            if(hero.y <= 0){
+                hero.y = 0;
+            }
+        } 
 }
 ```
