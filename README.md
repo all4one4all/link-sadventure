@@ -70,7 +70,9 @@ hero.stats = -9 林克左侧a
 
 hero.killState = 0 未拾取武器
 hero.killState = 14 林克正面挥剑
+hero.killState = -14 林克背面挥剑
 hero.killState = 14 林克正面挥剑
+hero.killState = -14 林克背面挥剑
 ```javascript
 var hero = {
     state: 1,  //角色未拾取武器前状态（正面or侧面or背面），当拾取后改状态转变为0
