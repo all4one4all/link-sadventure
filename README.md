@@ -1,6 +1,5 @@
 # [伪]林克的大冒险
-使用html5新API——canvas与requestAnimationFrame开发游戏
-
+使用html5新API——canvas与requestAnimationFrame开发游戏。游戏可以理解为另一种形式的动画，以一帧一帧连续播放图像为基础，根据用户的操作播放相应图像来实现交互。
 ## 简介
 游戏角色使用W\A\S\D上下左右移动，使用K攻击。
 ## 素材
