@@ -1,4 +1,6 @@
 # [伪]林克的大冒险
+使用html5新API——canvas与requestAnimationFrame开发游戏
+
 ## 简介
 游戏角色使用W\A\S\D上下左右移动，使用K攻击。
 ## 素材
@@ -71,11 +73,11 @@ hero.stats = -9 林克左侧a
 hero.killState = 0 未拾取武器
 hero.killState = 14 林克正面挥剑
 hero.killState = -14 林克背面挥剑
-hero.killState = 14 林克正面挥剑
-hero.killState = -14 林克背面挥剑
+hero.killState = 64 林克右侧挥剑
+hero.killState = -64 林克左侧挥剑
 ```javascript
 var hero = {
-    state: 1,  //角色未拾取武器前状态（正面or侧面or背面），当拾取后改状态转变为0
+    state: 1,  //角色未拾取武器前状态（正面or侧面or背面）
     killState: 0,  //角色拾取武器后状态（正面or侧面or背面）
     speed: 80,
     x: 0,
@@ -109,7 +111,7 @@ if (!hero.weapon) {
 ```javascript
 var update = function(delta) {
     if (87 in keysDown) { //用户按下了w键
-        if (hero.state === -1) { //
+        if (hero.state === -1) { 
             hero.state = -2;
         } else {
             hero.state = -1;
