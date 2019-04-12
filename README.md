@@ -26,7 +26,7 @@ canvas.width = 600;
 canvas.height = 400;
 ```
 ### 背景载入
-载入背景贴图：且声明一个布尔值判断背景贴图是否载入完成
+载入背景贴图：且声明一个布尔值判断背景贴图是否载入完成。
 ```javascript
 var bgReady = false;
 var bgImage = new Image();
